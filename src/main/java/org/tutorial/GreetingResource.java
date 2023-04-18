@@ -14,7 +14,6 @@ public class GreetingResource {
     @ConfigProperty(name = "greeting.message")
     String message;
 
-    // comando para correr la app mvn quarkus:dev
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
