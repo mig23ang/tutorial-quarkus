@@ -59,3 +59,5 @@ Easily start your Reactive RESTful Web Services
 comando para correr la app mvn quarkus:dev
 comando para crear imagen nativa mvn package -Pnative  
 docker build -f src/main/docker/Dockerfile.native -t quarkus/getting-started
+
+Cambiar propiedades del sistema : mvn quarkus:dev -Dgreeting.message=desdepropiedaddelsistema
