@@ -67,3 +67,10 @@ mvn package
 cd target
 cd quarkus-1.0.0-SNAPSHOT-native-image-source-jar
 java -jar target/quarkus-1.0.0-SNAPSHOT-native-image-source-jar/quarkus-1.0.0-SNAPSHOT-runner.jar
+
+para arrancar la app con otro perfil
+mvn quarkus:dev -Dquarkus.profile=stage
+
+limpiar un perfil 
+mvn clean install -Pstage
+
