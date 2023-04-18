@@ -5,13 +5,19 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+
 @Path("/hello")
 public class GreetingResource {
 
-    //comando para correr la app mvn quarkus:dev
+    // usar anotaciones micro profile config
+    @ConfigProperty(name = "greeting.message")
+    String message;
+
+    // comando para correr la app mvn quarkus:dev
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "Hello from RESTEasy Reactive developer mode";
+        return message;
     }
 }
