@@ -61,3 +61,9 @@ comando para crear imagen nativa mvn package -Pnative
 docker build -f src/main/docker/Dockerfile.native -t quarkus/getting-started
 
 Cambiar propiedades del sistema : mvn quarkus:dev -Dgreeting.message=desdepropiedaddelsistema
+
+CAMBIAR PERFILES DE USUARIO 
+mvn package
+cd target
+cd quarkus-1.0.0-SNAPSHOT-native-image-source-jar
+java -jar target/quarkus-1.0.0-SNAPSHOT-native-image-source-jar/quarkus-1.0.0-SNAPSHOT-runner.jar
